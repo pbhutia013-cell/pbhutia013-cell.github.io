@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeakFlow | Multilingual TTS</title>
+    <meta
+      name="description"
+      content="A multilingual text-to-speech website for converting text into speech in multiple languages."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">🔊</div>
+          <div>
+            <p class="eyebrow">AI voice studio</p>
+            <h1>SpeakFlow</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="panel">
+        <section class="toolbar">
+          <div class="field">
+            <label for="language">Language</label>
+            <select id="language"></select>
+          </div>
+
+          <div class="field">
+            <label for="voiceSelect">Voice</label>
+            <select id="voiceSelect"></select>
+          </div>
+
+          <div class="field range-field">
+            <label for="rate">Speed</label>
+            <div class="range-wrap">
+              <input id="rate" type="range" min="0.5" max="1.8" step="0.1" value="1" />
+              <span id="rateValue">1.0x</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="input-card card">
+            <div class="card-head">
+              <h2>Text</h2>
+            </div>
+            <textarea id="textInput" placeholder="Type your text here...">Hello! Welcome to SpeakFlow. This is a multilingual text-to-speech website.</textarea>
+            <div class="action-row">
+              <button id="speakBtn" class="primary">Speak</button>
+              <button id="pauseBtn" class="secondary">Pause</button>
+              <button id="resumeBtn" class="secondary">Resume</button>
+              <button id="stopBtn" class="danger">Stop</button>
+            </div>
+          </div>
+
+          <aside class="info-card card">
+            <h2>About</h2>
+            <p>
+              SpeakFlow turns typed text into spoken audio using your browser's built-in speech engine.
+              It supports multiple languages and voices for quick prototyping and testing.
+            </p>
+            <ul>
+              <li>Multilingual support</li>
+              <li>Voice selection</li>
+              <li>Speed controls</li>
+              <li>Pause / resume</li>
+            </ul>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
